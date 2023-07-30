@@ -17,14 +17,17 @@ function Canva({ name, photo }) {
 export default function Menu() {
     return (
         <div className="my-16">
-            <h1 className="mb-24 px-5 pb-3 flex justify-center text-4xl border border-black rounded-full">
+            <div className="flex justify-center" >
+            <h1 className="mb-24 pb-4 px-8 text-4xl border border-black rounded-full"
+            style={{ backgroundColor: "#808F8B" }} >
                 Menu
             </h1>
+            </div>
             <div className="flex justify-evenly mb-44">
-                <Canva name="Sea Food" photo="src\assets\imgs\seafood.jpg" />
-                <Canva name="Dessert" photo="src\assets\imgs\dessert.jpg" />
-                <Canva name="Fast Food" photo="src\assets\imgs\fast_food.jpg" />
-                <Canva name="Frozen" photo="src\assets\imgs\frozen.jpg" />
+                <Canva name="Sea Food" photo="src/assets/imgs/seafood.jpg" />
+                <Canva name="Dessert" photo="src/assets/imgs/dessert.jpg" />
+                <Canva name="Fast Food" photo="src/assets/imgs/fast_food.jpg" />
+                <Canva name="Frozen" photo="src/assets/imgs/frozen.jpg" />
             </div>
         </div>
     )
