@@ -1,6 +1,22 @@
-# React + Vite
+# Little Lemon
+A Restaurant Website made as a Practice Project
+## Tool
+VS Code
+## Languages
+- HTML
+* CSS3
++ Tailwind
+- JavaScripts
+- React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project was Created Via
+React + Vite
+
+## Use the Following Command to run the project on VS code
+`npm run dev`
+
+
+### This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
