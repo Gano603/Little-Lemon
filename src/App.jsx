@@ -12,7 +12,7 @@ import Menu from "./Components/Menu.jsx"
 function Reservation() {
   return (
     <div className="flex-col text-center my-72 font-bold text-3xl">
-      <h1>Page Not Found</h1> 
+      <h1>Page Not Found</h1>
       <p>The requested page was not found.</p>
     </div>
   );
@@ -20,7 +20,7 @@ function Reservation() {
 function About() {
   return (
     <div className="flex-col text-center my-72 font-bold text-3xl">
-      <h1>Page Not Found</h1> 
+      <h1>Page Not Found</h1>
       <p>The requested page was not found.</p>
     </div>
   );
@@ -29,7 +29,7 @@ function About() {
 function Review() {
   return (
     <div className="flex-col text-center my-72 font-bold text-3xl">
-      <h1>Page Not Found</h1> 
+      <h1>Page Not Found</h1>
       <p>The requested page was not found.</p>
     </div>
   );
@@ -40,6 +40,7 @@ export default function App() {
       <Router>
         <Navbar />
         <Routes>
+          <Route path="/" element={<Home_sec />} />
           <Route path="/home" element={<Home_sec />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/menu" element={<Menu />} />

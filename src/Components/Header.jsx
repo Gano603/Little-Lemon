@@ -20,7 +20,7 @@ export default function Navbar() {
             <img src="src\assets\imgs\logo_yellow.png" alt="Logo" width="270" height="270" />
           </li>
           <div className="flex me-40">
-            <li className="hover:border-b flex cursor-pointer pt-11 me-8">
+            <li className="border hover:border-b border-black flex cursor-pointer pt-11 me-8">
               <GoHome className="me-1.5 mt-1.5" />
               <Link to="/home">
                 Home
