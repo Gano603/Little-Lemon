@@ -6,34 +6,12 @@ import {
   Link
 } from "react-router-dom";
 import Home_sec from './Components/Home_section';
-import Navbar from "./Components/Header.jsx"
-import Menu from "./Components/Menu.jsx"
+import Navbar from "./Components/Header.jsx";
+import Menu from "./Components/Menu.jsx";
+import Review from "./Components/Review.jsx";
+import Reservation from "./Components/Reservation.jsx";
+import About from "./Components/About.jsx";
 
-function Reservation() {
-  return (
-    <div className="flex-col text-center my-72 font-bold text-3xl">
-      <h1>Page Not Found</h1>
-      <p>The requested page was not found.</p>
-    </div>
-  );
-}
-function About() {
-  return (
-    <div className="flex-col text-center my-72 font-bold text-3xl">
-      <h1>Page Not Found</h1>
-      <p>The requested page was not found.</p>
-    </div>
-  );
-}
-
-function Review() {
-  return (
-    <div className="flex-col text-center my-72 font-bold text-3xl">
-      <h1>Page Not Found</h1>
-      <p>The requested page was not found.</p>
-    </div>
-  );
-}
 export default function App() {
   return (
     <>

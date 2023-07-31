@@ -1,6 +1,15 @@
-import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { React, useState, useEffect } from "react";
+import Loader from "react-loader-spinner";
 
+
+function Loading() {
+    return (
+        <div className="flex justify-center items-center h-screen">
+            <Loader type="TailSpin" color="#4F46E5" height={80} width={80} />
+        </div>
+    );
+};
 
 function Btn() {
     return (
@@ -31,36 +40,49 @@ function Card({ Title, Description, alter, photo, price }) {
     );
 }
 
-
 export default function Home_sec() {
+    const [loading, setLoading] = useState(true);
+  
+    useEffect(() => {
+      // Simulate a delay to demonstrate the loading spinner
+      setTimeout(() => {
+        setLoading(false);
+      }, 5000); // Adjust the duration as needed
+    }, []);
     return (
         <div>
-            <div className="p-6 mt-16 flex justify-between text-white" style={{ backgroundColor: "#50655E" }}>
-                <div className="ms-36">
-                    <h1 className="text-6xl font-bold"> Little Lemon</h1>
-                    <h2 className="mt-1">A Flavorful Delight!</h2>
-                    <p className="mt-2">Experience vibrant flavors with expertly prepared signature dishes at little <br />
-                        Lemon as we believe in serving nothing but the freshest and most delicious <br />
-                        dishes.
-                    </p>
-                    <div className="mt-3 px-2 py-1 text-black bg-yellow-200 rounded-lg ">
-                        <p> <span className="border-b border-black">Visit Us</span> today and experience a culinary journey like no other. <br />
-                            <i className="font-bold">Little Lemon - Where Taste and Tradition Meet.</i> </p>
-                    </div>
-                </div>
-                <img className="me-36" src="src\assets\imgs\pasta.jpg" alt="Pasta Picture" width={360} />
-            </div>
-            <p style={{ marginLeft: '168px' }} className="mt-7 mb-5 text-2xl font-bold">
-                Today's Special
-            </p>
-            <div className="flex justify-around mb-6">
-                <Card Title="Fresh Drinks" Description="Cool and Thirst-quenching Drinks" photo="src\assets\imgs\drink.jpg"
-                    className="text-xl" alter="Fresh Drinks" price="$4" />
-                <Card Title="Fresh Salad" Description="Cool and Thirst-quenching Drinks" photo="src\assets\imgs\salad.jpg"
-                    className="text-xl" alter="Fresh Drinks" price="$11" />
-                <Card Title="Fresh Drinks" Description="Cool and Thirst-quenching Drinks" photo="src\assets\imgs\spice.jpg"
-                    className="text-xl" alter="Fresh Drinks" price="$7" />
-            </div>
+            {loading ? (
+                <Loading />) :
+                (
+                    <>
+                        <div className="p-6 mt-16 flex justify-between text-white" style={{ backgroundColor: "#50655E" }}>
+                            <div className="ms-36">
+                                <h1 className="text-6xl font-bold"> Little Lemon</h1>
+                                <h2 className="mt-1">A Flavorful Delight!</h2>
+                                <p className="mt-2">Experience vibrant flavors with expertly prepared signature dishes at little <br />
+                                    Lemon as we believe in serving nothing but the freshest and most delicious <br />
+                                    dishes.
+                                </p>
+                                <div className="mt-3 px-2 py-1 text-black bg-yellow-200 rounded-lg ">
+                                    <p> <span className="border-b border-black">Visit Us</span> today and experience a culinary journey like no other. <br />
+                                        <i className="font-bold">Little Lemon - Where Taste and Tradition Meet.</i> </p>
+                                </div>
+                            </div>
+                            <img className="me-36" src="src\assets\imgs\pasta.jpg" alt="Pasta Picture" width={360} />
+                        </div>
+                        <p style={{ marginLeft: '168px' }} className="mt-7 mb-5 text-2xl font-bold">
+                            Today's Special
+                        </p>
+                        <div className="flex justify-around mb-6">
+                            <Card Title="Fresh Drinks" Description="Cool and Thirst-quenching Drinks" photo="src\assets\imgs\drink.jpg"
+                                className="text-xl" alter="Fresh Drinks" price="$4" />
+                            <Card Title="Fresh Salad" Description="Cool and Thirst-quenching Drinks" photo="src\assets\imgs\salad.jpg"
+                                className="text-xl" alter="Fresh Drinks" price="$11" />
+                            <Card Title="Fresh Drinks" Description="Cool and Thirst-quenching Drinks" photo="src\assets\imgs\spice.jpg"
+                                className="text-xl" alter="Fresh Drinks" price="$7" />
+                        </div>
+                    </>
+                )};
         </div>
     );
 }
