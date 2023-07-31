@@ -1,15 +1,15 @@
 import { BsArrowRight } from "react-icons/bs";
 import { React, useState, useEffect } from "react";
-import {Loader} from "react-loader-spinner";
+// import {Loader} from "react-loader-spinner";
 
 
-function Loading() {
-    return (
-        <div className="flex justify-center items-center h-screen">
-            <Loader type="TailSpin" color="#4F46E5" height={80} width={80} />
-        </div>
-    );
-};
+// function Loading() {
+//     return (
+//         <div className="flex justify-center items-center h-screen">
+//             <Loader type="TailSpin" color="#4F46E5" height={80} width={80} />
+//         </div>
+//     );
+// };
 
 function Btn() {
     return (
@@ -41,20 +41,20 @@ function Card({ Title, Description, alter, photo, price }) {
 }
 
 export default function Home_sec() {
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
   
-    useEffect(() => {
-      // Simulate a delay to demonstrate the loading spinner
-      setTimeout(() => {
-        setLoading(false);
-      }, 5000); // Adjust the duration as needed
-    }, []);
+    // useEffect(() => {
+    //   // Simulate a delay to demonstrate the loading spinner
+    //   setTimeout(() => {
+    //     setLoading(false);
+    //   }, 5000); // Adjust the duration as needed
+    // }, []);
     return (
         <div>
-            {loading ? (
+            {/* {loading ? (
                 <Loading />) :
                 (
-                    <>
+                    <> */}
                         <div className="p-6 mt-16 flex justify-between text-white" style={{ backgroundColor: "#50655E" }}>
                             <div className="ms-36">
                                 <h1 className="text-6xl font-bold"> Little Lemon</h1>
@@ -81,8 +81,8 @@ export default function Home_sec() {
                             <Card Title="Fresh Drinks" Description="Cool and Thirst-quenching Drinks" photo="src\assets\imgs\spice.jpg"
                                 className="text-xl" alter="Fresh Drinks" price="$7" />
                         </div>
-                    </>
-                )};
+                    {/* </>
+                )}; */}
         </div>
     );
 }
