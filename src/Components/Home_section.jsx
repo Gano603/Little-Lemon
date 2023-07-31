@@ -1,6 +1,6 @@
 import { BsArrowRight } from "react-icons/bs";
 import { React, useState, useEffect } from "react";
-import Loader from "react-loader-spinner";
+import {Loader} from "react-loader-spinner";
 
 
 function Loading() {
