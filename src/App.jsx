@@ -24,6 +24,7 @@ export default function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
           <Route path="/customer_reviews" element={<Review />} />
+          {/* Reservation, About , Review */}
         </Routes>
       </Router>
     </>
